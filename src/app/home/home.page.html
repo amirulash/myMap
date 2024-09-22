@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Rumah Lucu Pogung Lor
+      Amirul's Map
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,9 +9,17 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="medium">Rumah Lucu Pogung Lor</ion-title>
+      <ion-title size="large">Amirul's Map</ion-title>
     </ion-toolbar>
   </ion-header>
+
+  <ion-item>
+    <ion-select [(ngModel)]="selectedBasemap" (ionChange)="changeBasemap()">
+      <ion-select-option value="topo-vector">Topographic Basemap</ion-select-option>
+      <ion-select-option value="terrain">Terrain Basemap</ion-select-option>
+      <ion-select-option value="satellite">Satellite Basemap</ion-select-option>
+    </ion-select>
+  </ion-item>
 
   <div id="container">
     <!--<strong>Ready to create an app?</strong>
